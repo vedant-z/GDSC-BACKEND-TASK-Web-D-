@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Data</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/js/jquery-3.6.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="main" style="margin-top: 2rem;">
+                <h1 style="text-align: center;">Students Data</h1>
+                <ol>
+                    <% for(var i=0; i < DATA.length; i++) {%>
+                        <li>
+                            <div>
+                                Name: <%= DATA[i].name %>
+                            </div>
+                            <div>
+                                Roll Number: <%= DATA[i].roll_number %>
+                            </div>
+                            <a href="/editData/<%= DATA[i]._id %>"><button class="btn btn-primary">Edit</button></a>
+
+                            <form action="/deleteData/<%= DATA[i]._id %>?_method=DELETE" method="POST"
+                                class="mt-2 mb-1">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </li>
+                        <% } %>
+                </ol>
+            </div>
+        </div>
+    </body>
+
+</html>

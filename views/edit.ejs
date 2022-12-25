@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Data</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/js/jquery-3.6.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main" style="margin-top: 5rem;">
+                <h1 style="text-align: center;margin-bottom: 2rem;">Edit Data</h1>
+                <form action="/saveData/<%= DATA._id %>?_method=PUT" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= DATA.name %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="roll_number" class="form-label">Roll Number</label>
+                        <input type="text" class="form-control" id="roll_number" name="roll_number"
+                            value="<%= DATA.roll_number %>">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

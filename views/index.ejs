@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GDSC Form</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/js/jquery-3.6.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </head>
+
+
+    <body>
+        <div class="container">
+            <div id="main" style="margin-top: 5rem;">
+                <h1 style="margin-bottom: 3rem;text-align: center;">GDSC Student Data</h1>
+                <div>
+                    <form action="/saveData" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="roll_number" class="form-label">Roll Number</label>
+                            <input type="text" class="form-control" id="roll_number" name="roll_number">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <a href="/showData"><button type="submit" class="btn btn-warning">Show</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
